@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="16.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <None Include="..\..\FPSExperiment.uproject" />
+    <Filter Include="Source">
+      <UniqueIdentifier>{64AA2EE0-6DD8-464A-AFED-C13F626C3BAE}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\FPSExperiment.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <None Include="..\..\Source\FPSExperimentEditor.Target.cs">
+      <Filter>Source</Filter>
+    </None>
+    <Filter Include="Config">
+      <UniqueIdentifier>{A6C06545-E60C-48DA-832C-7D399B7AE89F}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Config\DefaultEditor.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEditorPerProjectUserSettings.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultEngine.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultGame.ini">
+      <Filter>Config</Filter>
+    </None>
+    <None Include="..\..\Config\DefaultInput.ini">
+      <Filter>Config</Filter>
+    </None>
+    <Filter Include="Source\FPSExperiment">
+      <UniqueIdentifier>{C12740A2-EED5-404F-B1BC-B3CBF2871E1A}</UniqueIdentifier>
+    </Filter>
+    <None Include="..\..\Source\FPSExperiment\FPSExperiment.Build.cs">
+      <Filter>Source\FPSExperiment</Filter>
+    </None>
+    <ClCompile Include="..\..\Source\FPSExperiment\FPSExperiment.cpp">
+      <Filter>Source\FPSExperiment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FPSExperiment\FPSExperiment.h">
+      <Filter>Source\FPSExperiment</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\FPSExperiment\FPSExperimentCharacter.cpp">
+      <Filter>Source\FPSExperiment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FPSExperiment\FPSExperimentCharacter.h">
+      <Filter>Source\FPSExperiment</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\FPSExperiment\FPSExperimentGameMode.cpp">
+      <Filter>Source\FPSExperiment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FPSExperiment\FPSExperimentGameMode.h">
+      <Filter>Source\FPSExperiment</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\FPSExperiment\FPSExperimentHUD.cpp">
+      <Filter>Source\FPSExperiment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FPSExperiment\FPSExperimentHUD.h">
+      <Filter>Source\FPSExperiment</Filter>
+    </ClInclude>
+    <ClCompile Include="..\..\Source\FPSExperiment\FPSExperimentProjectile.cpp">
+      <Filter>Source\FPSExperiment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FPSExperiment\FPSExperimentProjectile.h">
+      <Filter>Source\FPSExperiment</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

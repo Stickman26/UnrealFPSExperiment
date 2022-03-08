@@ -1,0 +1,10 @@
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\Definitions.FPSExperiment.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Source\FPSExperiment/FPSExperimentHUD.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/HUD.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/HUDHitBox.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/DebugTextInfo.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DebugTextInfo.generated.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\HUD.generated.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Inc\FPSExperiment\FPSExperimentHUD.generated.h

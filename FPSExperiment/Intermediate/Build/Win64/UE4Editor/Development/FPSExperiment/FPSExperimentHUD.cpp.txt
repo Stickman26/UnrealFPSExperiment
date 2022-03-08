@@ -1,0 +1,17 @@
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\Definitions.FPSExperiment.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Source\FPSExperiment\FPSExperimentHUD.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/HUD.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/HUDHitBox.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/DebugTextInfo.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\DebugTextInfo.generated.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\HUD.generated.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Inc\FPSExperiment\FPSExperimentHUD.generated.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/Canvas.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Public\CanvasItem.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/Font.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\Engine/FontImportOptions.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\FontImportOptions.generated.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\SlateCore\Public\Fonts/FontProviderInterface.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\SlateCore\FontProviderInterface.generated.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Font.generated.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Canvas.generated.h

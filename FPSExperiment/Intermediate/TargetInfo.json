@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "FPSExperiment",
+			"Path": "X:\\Repo\\UnrealFPS\\UnrealFPSExperiment\\FPSExperiment\\Source\\FPSExperiment.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "FPSExperimentEditor",
+			"Path": "X:\\Repo\\UnrealFPS\\UnrealFPSExperiment\\FPSExperiment\\Source\\FPSExperimentEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}
