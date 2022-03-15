@@ -3,7 +3,7 @@
   <ItemGroup>
     <None Include="..\..\FPSExperiment.uproject" />
     <Filter Include="Source">
-      <UniqueIdentifier>{64AA2EE0-6DD8-464A-AFED-C13F626C3BAE}</UniqueIdentifier>
+      <UniqueIdentifier>{2309C006-3846-43AF-AC6A-3C5EC3E22820}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Source\FPSExperiment.Target.cs">
       <Filter>Source</Filter>
@@ -12,7 +12,7 @@
       <Filter>Source</Filter>
     </None>
     <Filter Include="Config">
-      <UniqueIdentifier>{A6C06545-E60C-48DA-832C-7D399B7AE89F}</UniqueIdentifier>
+      <UniqueIdentifier>{4BC89284-76B9-47C0-8221-EB2A412AD037}</UniqueIdentifier>
     </Filter>
     <None Include="..\..\Config\DefaultEditor.ini">
       <Filter>Config</Filter>
@@ -30,8 +30,14 @@
       <Filter>Config</Filter>
     </None>
     <Filter Include="Source\FPSExperiment">
-      <UniqueIdentifier>{C12740A2-EED5-404F-B1BC-B3CBF2871E1A}</UniqueIdentifier>
+      <UniqueIdentifier>{5A619E03-BA3C-4762-B8B0-5A7A5CCF09A3}</UniqueIdentifier>
     </Filter>
+    <ClCompile Include="..\..\Source\FPSExperiment\FE_WeaponDataAsset.cpp">
+      <Filter>Source\FPSExperiment</Filter>
+    </ClCompile>
+    <ClInclude Include="..\..\Source\FPSExperiment\FE_WeaponDataAsset.h">
+      <Filter>Source\FPSExperiment</Filter>
+    </ClInclude>
     <None Include="..\..\Source\FPSExperiment\FPSExperiment.Build.cs">
       <Filter>Source\FPSExperiment</Filter>
     </None>
