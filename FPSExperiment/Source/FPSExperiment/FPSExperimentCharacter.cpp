@@ -16,6 +16,16 @@ DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
 //////////////////////////////////////////////////////////////////////////
 // AFPSExperimentCharacter
+/*******************************************************************************
+	Modifications to make
+	- Add hit scan capabilities
+		- Include Debugging mode
+	- Add scatter shot capabilities
+		- Include Debugging mode
+	- Find way of feeding Data from Weapon Data Assets to pipeline
+	- Add variables for each relivant piece of data based on Weapon Data Assets
+
+********************************************************************************/
 
 AFPSExperimentCharacter::AFPSExperimentCharacter()
 {
