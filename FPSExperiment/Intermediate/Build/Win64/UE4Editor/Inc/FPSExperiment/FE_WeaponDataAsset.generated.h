@@ -13,17 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FPSEXPERIMENT_FE_WeaponDataAsset_generated_h
 
-#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_20_GENERATED_BODY \
-	friend struct Z_Construct_UScriptStruct_FWeaponProfile_Statics; \
-	FPSEXPERIMENT_API static class UScriptStruct* StaticStruct();
-
-
-template<> FPSEXPERIMENT_API UScriptStruct* StaticStruct<struct FWeaponProfile>();
-
-#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_SPARSE_DATA
-#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_RPC_WRAPPERS
-#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_RPC_WRAPPERS_NO_PURE_DECLS
-#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_INCLASS_NO_PURE_DECLS \
+#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_SPARSE_DATA
+#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_RPC_WRAPPERS
+#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_RPC_WRAPPERS_NO_PURE_DECLS
+#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUFE_WeaponDataAsset(); \
 	friend struct Z_Construct_UClass_UFE_WeaponDataAsset_Statics; \
@@ -32,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(UFE_WeaponDataAsset)
 
 
-#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_INCLASS \
+#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_INCLASS \
 private: \
 	static void StaticRegisterNativesUFE_WeaponDataAsset(); \
 	friend struct Z_Construct_UClass_UFE_WeaponDataAsset_Statics; \
@@ -41,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(UFE_WeaponDataAsset)
 
 
-#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_STANDARD_CONSTRUCTORS \
+#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UFE_WeaponDataAsset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UFE_WeaponDataAsset) \
@@ -54,7 +47,7 @@ private: \
 public:
 
 
-#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_ENHANCED_CONSTRUCTORS \
+#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_ENHANCED_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UFE_WeaponDataAsset(const FObjectInitializer& ObjectInitializer = FObjectInitializer::Get()) : Super(ObjectInitializer) { }; \
 private: \
@@ -67,31 +60,47 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UFE_WeaponDataAsset)
 
 
-#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__Items() { return STRUCT_OFFSET(UFE_WeaponDataAsset, Items); }
+#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_PRIVATE_PROPERTY_OFFSET \
+	FORCEINLINE static uint32 __PPO__WeaponName() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponName); } \
+	FORCEINLINE static uint32 __PPO__weaponType() { return STRUCT_OFFSET(UFE_WeaponDataAsset, weaponType); } \
+	FORCEINLINE static uint32 __PPO__WeaponIsFullAuto() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponIsFullAuto); } \
+	FORCEINLINE static uint32 __PPO__WeaponShotDelay() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponShotDelay); } \
+	FORCEINLINE static uint32 __PPO__WeaponFireRate() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponFireRate); } \
+	FORCEINLINE static uint32 __PPO__WeaponDrawStowTime() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponDrawStowTime); } \
+	FORCEINLINE static uint32 __PPO__WeaponMaxAmmoReserves() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponMaxAmmoReserves); } \
+	FORCEINLINE static uint32 __PPO__WeaponMaxLoadedAmmo() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponMaxLoadedAmmo); } \
+	FORCEINLINE static uint32 __PPO__WeaponReloadTime() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponReloadTime); } \
+	FORCEINLINE static uint32 __PPO__WeaponMinimumScatterValue() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponMinimumScatterValue); } \
+	FORCEINLINE static uint32 __PPO__WeaponMaximumScatterValue() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponMaximumScatterValue); } \
+	FORCEINLINE static uint32 __PPO__WeaponScatterValueIncreasePerShot() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponScatterValueIncreasePerShot); } \
+	FORCEINLINE static uint32 __PPO__WeaponScatterValueDecreasePerTick() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponScatterValueDecreasePerTick); } \
+	FORCEINLINE static uint32 __PPO__WeaponDamagePerShot() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponDamagePerShot); } \
+	FORCEINLINE static uint32 __PPO__WeaponNumberOfProjectilesPerShot() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponNumberOfProjectilesPerShot); } \
+	FORCEINLINE static uint32 __PPO__WeaponDamagePerPellet() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponDamagePerPellet); } \
+	FORCEINLINE static uint32 __PPO__WeaponProjectile() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponProjectile); }
 
 
-#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_59_PROLOG
-#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_GENERATED_BODY_LEGACY \
+#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_20_PROLOG
+#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_PRIVATE_PROPERTY_OFFSET \
-	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_SPARSE_DATA \
-	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_RPC_WRAPPERS \
-	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_INCLASS \
-	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_STANDARD_CONSTRUCTORS \
+	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_PRIVATE_PROPERTY_OFFSET \
+	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_SPARSE_DATA \
+	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_RPC_WRAPPERS \
+	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_INCLASS \
+	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_GENERATED_BODY \
+#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_PRIVATE_PROPERTY_OFFSET \
-	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_SPARSE_DATA \
-	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_RPC_WRAPPERS_NO_PURE_DECLS \
-	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_INCLASS_NO_PURE_DECLS \
-	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_62_ENHANCED_CONSTRUCTORS \
+	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_PRIVATE_PROPERTY_OFFSET \
+	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_SPARSE_DATA \
+	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_RPC_WRAPPERS_NO_PURE_DECLS \
+	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_INCLASS_NO_PURE_DECLS \
+	FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
