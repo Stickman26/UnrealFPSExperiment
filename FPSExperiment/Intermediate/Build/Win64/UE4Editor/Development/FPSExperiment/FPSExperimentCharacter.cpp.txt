@@ -46,3 +46,6 @@ X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\E
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\HeadMountedDisplay\Public\LateUpdateManager.h
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay\MotionControllerComponent.generated.h
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\HeadMountedDisplay\Public\XRMotionControllerBase.h
+X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Source\FPSExperiment\FE_WeaponDataAsset.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Inc\FPSExperiment\FE_WeaponDataAsset.generated.h

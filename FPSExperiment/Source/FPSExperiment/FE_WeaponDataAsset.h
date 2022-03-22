@@ -23,12 +23,12 @@ class FPSEXPERIMENT_API UFE_WeaponDataAsset : public UDataAsset
 	GENERATED_BODY()
 
 	//General Variables regarding weapons
-
+public:
 	UPROPERTY(EditAnywhere)
 	FString WeaponName;
 
 	UPROPERTY(EditAnywhere)
-	TEnumAsByte<WeaponType> weaponType;
+	TEnumAsByte<WeaponType> WeaponType;
 
 	UPROPERTY(EditAnywhere)
 	bool WeaponIsFullAuto;

@@ -19,6 +19,7 @@ void AFPSExperimentHUD::DrawHUD()
 {
 	Super::DrawHUD();
 
+	/*
 	// Draw very simple crosshair
 
 	// find center of the Canvas
@@ -32,4 +33,5 @@ void AFPSExperimentHUD::DrawHUD()
 	FCanvasTileItem TileItem( CrosshairDrawPosition, CrosshairTex->Resource, FLinearColor::White);
 	TileItem.BlendMode = SE_BLEND_Translucent;
 	Canvas->DrawItem( TileItem );
+	//*/
 }

@@ -60,26 +60,7 @@ public: \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UFE_WeaponDataAsset)
 
 
-#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_PRIVATE_PROPERTY_OFFSET \
-	FORCEINLINE static uint32 __PPO__WeaponName() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponName); } \
-	FORCEINLINE static uint32 __PPO__weaponType() { return STRUCT_OFFSET(UFE_WeaponDataAsset, weaponType); } \
-	FORCEINLINE static uint32 __PPO__WeaponIsFullAuto() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponIsFullAuto); } \
-	FORCEINLINE static uint32 __PPO__WeaponShotDelay() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponShotDelay); } \
-	FORCEINLINE static uint32 __PPO__WeaponFireRate() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponFireRate); } \
-	FORCEINLINE static uint32 __PPO__WeaponDrawStowTime() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponDrawStowTime); } \
-	FORCEINLINE static uint32 __PPO__WeaponMaxAmmoReserves() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponMaxAmmoReserves); } \
-	FORCEINLINE static uint32 __PPO__WeaponMaxLoadedAmmo() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponMaxLoadedAmmo); } \
-	FORCEINLINE static uint32 __PPO__WeaponReloadTime() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponReloadTime); } \
-	FORCEINLINE static uint32 __PPO__WeaponMinimumScatterValue() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponMinimumScatterValue); } \
-	FORCEINLINE static uint32 __PPO__WeaponMaximumScatterValue() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponMaximumScatterValue); } \
-	FORCEINLINE static uint32 __PPO__WeaponScatterValueIncreasePerShot() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponScatterValueIncreasePerShot); } \
-	FORCEINLINE static uint32 __PPO__WeaponScatterValueDecreasePerTick() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponScatterValueDecreasePerTick); } \
-	FORCEINLINE static uint32 __PPO__WeaponDamagePerShot() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponDamagePerShot); } \
-	FORCEINLINE static uint32 __PPO__WeaponNumberOfProjectilesPerShot() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponNumberOfProjectilesPerShot); } \
-	FORCEINLINE static uint32 __PPO__WeaponDamagePerPellet() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponDamagePerPellet); } \
-	FORCEINLINE static uint32 __PPO__WeaponProjectile() { return STRUCT_OFFSET(UFE_WeaponDataAsset, WeaponProjectile); }
-
-
+#define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_PRIVATE_PROPERTY_OFFSET
 #define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_20_PROLOG
 #define FPSExperiment_Source_FPSExperiment_FE_WeaponDataAsset_h_23_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \

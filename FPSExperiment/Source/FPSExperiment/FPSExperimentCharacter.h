@@ -13,6 +13,7 @@ class UCameraComponent;
 class UMotionControllerComponent;
 class UAnimMontage;
 class USoundBase;
+class UFE_WeaponDataAsset;
 
 UCLASS(config=Game)
 class AFPSExperimentCharacter : public ACharacter
@@ -143,6 +144,25 @@ public:
 	USkeletalMeshComponent* GetMesh1P() const { return Mesh1P; }
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return FirstPersonCameraComponent; }
+
+/*
+ * Additional Functions and Variables added
+ */
+public:
+	UPROPERTY(EditAnywhere, Category = "Gun Properties")
+	UFE_WeaponDataAsset* ActiveWeapon;
+
+private:
+	UPROPERTY(EditAnywhere, Category = "Gun Properties")
+	float CurrentWeaponSpread;
+
+protected:
+	//Applies bullet spread on shot
+	FVector BulletSpreadModifier(FVector Forward);
+	//Increases bullet spread when called - Used in OnFire()
+	void BulletSpreadIncrease();
+	//Decreases bullet spread when called - Used in OnTick()
+	void BulletSpreadDecrease();
 
 };
 

@@ -11,6 +11,9 @@
 #include "Kismet/GameplayStatics.h"
 #include "MotionControllerComponent.h"
 #include "XRMotionControllerBase.h" // for FXRMotionControllerBase::RightHandSourceId
+#include "DrawDebugHelpers.h"
+#include "Math/UnrealMathUtility.h"
+#include "FE_WeaponDataAsset.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
@@ -92,6 +95,9 @@ AFPSExperimentCharacter::AFPSExperimentCharacter()
 
 	// Uncomment the following line to turn motion controllers on by default:
 	//bUsingMotionControllers = true;
+
+	//Intialize additional variables
+	CurrentWeaponSpread = 0.f;
 }
 
 void AFPSExperimentCharacter::BeginPlay()
@@ -150,30 +156,58 @@ void AFPSExperimentCharacter::SetupPlayerInputComponent(class UInputComponent* P
 
 void AFPSExperimentCharacter::OnFire()
 {
-	// try and fire a projectile
-	if (ProjectileClass != nullptr)
+	if (ActiveWeapon == nullptr)
 	{
-		UWorld* const World = GetWorld();
-		if (World != nullptr)
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("No weapon active"));
+		return;
+	}
+
+	if (ActiveWeapon->WeaponType == WeaponType::HitScan)
+	{
+		FHitResult Hit;
+		float RayLength = 300;
+		FVector StartLocation = FirstPersonCameraComponent->GetComponentLocation();
+
+		//Increase Spread of bullet
+		BulletSpreadIncrease();
+		FVector SpreadForward = BulletSpreadModifier(FirstPersonCameraComponent->GetForwardVector() * RayLength);
+
+		FVector EndLocation = StartLocation + (SpreadForward);
+		FCollisionQueryParams CollisionParameters;
+		ActorLineTraceSingle(Hit, StartLocation, EndLocation, ECollisionChannel::ECC_WorldDynamic, CollisionParameters);
+		DrawDebugLine(GetWorld(), StartLocation, EndLocation, FColor::Green, true, -1, 0, 1.f);
+	}
+	else if (ActiveWeapon->WeaponType == WeaponType::Scatter)
+	{
+
+	}
+	else if (ActiveWeapon->WeaponType == WeaponType::Projectile)
+	{
+		// try and fire a projectile
+		if (ProjectileClass != nullptr)
 		{
-			if (bUsingMotionControllers)
+			UWorld* const World = GetWorld();
+			if (World != nullptr)
 			{
-				const FRotator SpawnRotation = VR_MuzzleLocation->GetComponentRotation();
-				const FVector SpawnLocation = VR_MuzzleLocation->GetComponentLocation();
-				World->SpawnActor<AFPSExperimentProjectile>(ProjectileClass, SpawnLocation, SpawnRotation);
-			}
-			else
-			{
-				const FRotator SpawnRotation = GetControlRotation();
-				// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
-				const FVector SpawnLocation = ((FP_MuzzleLocation != nullptr) ? FP_MuzzleLocation->GetComponentLocation() : GetActorLocation()) + SpawnRotation.RotateVector(GunOffset);
+				if (bUsingMotionControllers)
+				{
+					const FRotator SpawnRotation = VR_MuzzleLocation->GetComponentRotation();
+					const FVector SpawnLocation = VR_MuzzleLocation->GetComponentLocation();
+					World->SpawnActor<AFPSExperimentProjectile>(ProjectileClass, SpawnLocation, SpawnRotation);
+				}
+				else
+				{
+					const FRotator SpawnRotation = GetControlRotation();
+					// MuzzleOffset is in camera space, so transform it to world space before offsetting from the character location to find the final muzzle position
+					const FVector SpawnLocation = ((FP_MuzzleLocation != nullptr) ? FP_MuzzleLocation->GetComponentLocation() : GetActorLocation()) + SpawnRotation.RotateVector(GunOffset);
 
-				//Set Spawn Collision Handling Override
-				FActorSpawnParameters ActorSpawnParams;
-				ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
+					//Set Spawn Collision Handling Override
+					FActorSpawnParameters ActorSpawnParams;
+					ActorSpawnParams.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AdjustIfPossibleButDontSpawnIfColliding;
 
-				// spawn the projectile at the muzzle
-				World->SpawnActor<AFPSExperimentProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+					// spawn the projectile at the muzzle
+					World->SpawnActor<AFPSExperimentProjectile>(ProjectileClass, SpawnLocation, SpawnRotation, ActorSpawnParams);
+				}
 			}
 		}
 	}
@@ -307,4 +341,54 @@ bool AFPSExperimentCharacter::EnableTouchscreenMovement(class UInputComponent* P
 	}
 	
 	return false;
+}
+
+//Additional Functions
+
+FVector AFPSExperimentCharacter::BulletSpreadModifier(FVector Forward)
+{
+	FVector ModifiedForward = Forward;
+	float spreadModifier = CurrentWeaponSpread;
+
+	ModifiedForward.X += FMath::RandRange(-spreadModifier, spreadModifier);
+	ModifiedForward.Y += FMath::RandRange(-spreadModifier, spreadModifier);
+	ModifiedForward.Z += FMath::RandRange(-spreadModifier, spreadModifier);
+
+	return ModifiedForward;
+}
+
+void AFPSExperimentCharacter::BulletSpreadIncrease()
+{
+	if (ActiveWeapon != nullptr)
+	{
+		CurrentWeaponSpread += ActiveWeapon->WeaponScatterValueIncreasePerShot;
+
+		if (CurrentWeaponSpread >= ActiveWeapon->WeaponMaximumScatterValue)
+		{
+			CurrentWeaponSpread = ActiveWeapon->WeaponMaximumScatterValue;
+		}
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("No weapon active"));
+	}
+}
+
+void AFPSExperimentCharacter::BulletSpreadDecrease()
+{
+	if (ActiveWeapon != nullptr)
+	{
+		if (CurrentWeaponSpread <= ActiveWeapon->WeaponMinimumScatterValue)
+		{
+			CurrentWeaponSpread = ActiveWeapon->WeaponMinimumScatterValue;
+		}
+		else
+		{
+			CurrentWeaponSpread -= ActiveWeapon->WeaponScatterValueDecreasePerTick;
+		}
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("No weapon active"));
+	}
 }
