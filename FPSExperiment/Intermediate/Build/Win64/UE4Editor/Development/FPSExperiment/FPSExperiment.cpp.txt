@@ -1,2 +1,2 @@
-X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\Definitions.FPSExperiment.h
-X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Source\FPSExperiment\FPSExperiment.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\Definitions.FPSExperiment.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Source\FPSExperiment\FPSExperiment.h

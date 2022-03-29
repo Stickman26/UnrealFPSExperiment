@@ -1,14 +1,14 @@
-X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\Definitions.FPSExperiment.h
-X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Source\FPSExperiment\FPSExperimentCharacter.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\Definitions.FPSExperiment.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Source\FPSExperiment\FPSExperimentCharacter.h
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/Character.h
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementReplication.h
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementReplication.generated.h
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\GameFramework/RootMotionSource.h
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\RootMotionSource.generated.h
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\Character.generated.h
-X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Inc\FPSExperiment\FPSExperimentCharacter.generated.h
-X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Source\FPSExperiment\FPSExperimentProjectile.h
-X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Inc\FPSExperiment\FPSExperimentProjectile.generated.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Inc\FPSExperiment\FPSExperimentCharacter.generated.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Source\FPSExperiment\FPSExperimentProjectile.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Inc\FPSExperiment\FPSExperimentProjectile.generated.h
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\Camera/CameraComponent.h
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CameraComponent.generated.h
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Classes\Components/CapsuleComponent.h
@@ -47,5 +47,5 @@ X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\HeadMountedDisplay\Public
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Intermediate\Build\Win64\UE4Editor\Inc\HeadMountedDisplay\MotionControllerComponent.generated.h
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\HeadMountedDisplay\Public\XRMotionControllerBase.h
 X:\Epic Games\Games4Epic\UE_4.27\Engine\Source\Runtime\Engine\Public\DrawDebugHelpers.h
-X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Source\FPSExperiment\FE_WeaponDataAsset.h
-X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Inc\FPSExperiment\FE_WeaponDataAsset.generated.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Source\FPSExperiment\FE_WeaponDataAsset.h
+X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Inc\FPSExperiment\FE_WeaponDataAsset.generated.h

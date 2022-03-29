@@ -28,7 +28,7 @@ public:
 	FString Name;
 
 	UPROPERTY(EditAnywhere)
-	TEnumAsByte<WeaponType> Type;
+	TEnumAsByte<WeaponType> Type = WeaponType::HitScan;
 
 	UPROPERTY(EditAnywhere)
 	bool IsFullAuto;
@@ -45,10 +45,10 @@ public:
 	//Variables regarding ammuntion and reloading
 
 	UPROPERTY(Category = "Ammuntion/Reloading", EditAnywhere)
-	uint16 MaxAmmoReserves;
+	int MaxAmmoReserves;
 
 	UPROPERTY(Category = "Ammuntion/Reloading", EditAnywhere)
-	uint16 MaxLoadedAmmo;
+	int MaxLoadedAmmo;
 
 	UPROPERTY(Category = "Ammuntion/Reloading", EditAnywhere)
 	float ReloadTime;
@@ -69,19 +69,19 @@ public:
 	
 	//Variables for hit scan weapons
 
-	UPROPERTY(Category = "Hit Scan", EditAnywhere, meta = (EditCondition = "weaponType == WeaponType::HitScan"))
+	UPROPERTY(Category = "Hit Scan", EditAnywhere, meta = (EditCondition = "Type == WeaponType::HitScan"))
 	float DamagePerShot;
 
 	//Variables for scatter weapons
 
-	UPROPERTY(Category = "Scatter", EditAnywhere, meta=(EditCondition = "weaponType == WeaponType::Scatter"))
-	uint16 NumberOfProjectilesPerShot = 5;
+	UPROPERTY(Category = "Scatter", EditAnywhere, meta = (EditCondition = "Type == WeaponType::Scatter"))
+	int NumberOfProjectilesPerShot = 5;
 	
-	UPROPERTY(Category = "Scatter", EditAnywhere, meta = (EditCondition = "weaponType == WeaponType::Scatter"))
+	UPROPERTY(Category = "Scatter", EditAnywhere, meta = (EditCondition = "Type == WeaponType::Scatter"))
 	float DamagePerPellet;
 
 	//Variables for projectile weapons
 
-	UPROPERTY(Category = "Projectile", EditAnywhere, meta = (EditCondition = "weaponType == WeaponType::Projectile"))
+	UPROPERTY(Category = "Projectile", EditAnywhere, meta = (EditCondition = "Type == WeaponType::Projectile"))
 	TAssetSubclassOf<AActor> Projectile;
 };

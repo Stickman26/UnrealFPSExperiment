@@ -1,21 +1,19 @@
-﻿  Using 'git status' to determine working set for adaptive non-unity build (X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment).
+﻿  Using 'git status' to determine working set for adaptive non-unity build (X:\Repo\UnrealFPS\UnrealFPSExperiment).
   Parsing headers for FPSExperimentEditor
-    Running UnrealHeaderTool "X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\FPSExperiment.uproject" "X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\FPSExperimentEditor\Development\FPSExperimentEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Stickman\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+    Running UnrealHeaderTool "X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\FPSExperiment.uproject" "X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\FPSExperimentEditor\Development\FPSExperimentEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Stickman\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
   LogInit: Display: Loading text-based GConfig....
-  Reflection code generated for FPSExperimentEditor in 4.6757667 seconds
+  Reflection code generated for FPSExperimentEditor in 4.4086699 seconds
   Building FPSExperimentEditor...
   Using Visual Studio 2019 14.25.28610 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 9 actions with 12 processes...
-    [1/9] FPSExperiment.init.gen.cpp
-    [2/9] FE_WeaponDataAsset.cpp
-    [3/9] FE_WeaponDataAsset.gen.cpp
-    [4/9] FPSExperimentCharacter.gen.cpp
-    [5/9] FPSExperimentGameMode.cpp
-    [6/9] FPSExperimentCharacter.cpp
-    [7/9] UE4Editor-FPSExperiment.lib
-       Creating library X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment.lib and object X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment.exp
-    [8/9] UE4Editor-FPSExperiment.dll
-       Creating library X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment.suppressed.lib and object X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment.suppressed.exp
-    [9/9] FPSExperimentEditor.target
-  Total time in Parallel executor: 3.95 seconds
-  Total execution time: 9.34 seconds
+  Building 7 actions with 12 processes...
+    [1/7] FE_WeaponDataAsset.cpp
+    [2/7] FPSExperiment.init.gen.cpp
+    [3/7] FE_WeaponDataAsset.gen.cpp
+    [4/7] FPSExperimentCharacter.cpp
+    [5/7] UE4Editor-FPSExperiment.lib
+       Creating library X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment.lib and object X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment.exp
+    [6/7] UE4Editor-FPSExperiment.dll
+       Creating library X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment.suppressed.lib and object X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment.suppressed.exp
+    [7/7] FPSExperimentEditor.target
+  Total time in Parallel executor: 3.69 seconds
+  Total execution time: 8.82 seconds

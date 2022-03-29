@@ -2,12 +2,12 @@
 	"Targets": [
 		{
 			"Name": "FPSExperiment",
-			"Path": "X:\\Repo\\UnrealFPS\\DEATH\\UnrealFPSExperiment\\FPSExperiment\\Source\\FPSExperiment.Target.cs",
+			"Path": "X:\\Repo\\UnrealFPS\\UnrealFPSExperiment\\FPSExperiment\\Source\\FPSExperiment.Target.cs",
 			"Type": "Game"
 		},
 		{
 			"Name": "FPSExperimentEditor",
-			"Path": "X:\\Repo\\UnrealFPS\\DEATH\\UnrealFPSExperiment\\FPSExperiment\\Source\\FPSExperimentEditor.Target.cs",
+			"Path": "X:\\Repo\\UnrealFPS\\UnrealFPSExperiment\\FPSExperiment\\Source\\FPSExperimentEditor.Target.cs",
 			"Type": "Editor"
 		}
 	]

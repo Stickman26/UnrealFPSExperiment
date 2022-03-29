@@ -231,8 +231,8 @@
 /I Editor\Kismet\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\ClothingSystemRuntimeInterface
 /I Runtime\ClothingSystemRuntimeInterface\Public
-/I X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Inc\FPSExperiment
-/I X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Source
+/I X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Inc\FPSExperiment
+/I X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Source
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\AugmentedReality
 /I Runtime\AugmentedReality\Public
 /I ..\Intermediate\Build\Win64\UE4Editor\Inc\MRMesh
@@ -266,12 +266,12 @@
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um"
 /I "C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt"
-/FI"X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\FPSExperimentEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Yu"X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\FPSExperimentEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
-/Fp"X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\FPSExperimentEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
-"X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Source\FPSExperiment\FPSExperimentProjectile.cpp"
-/FI"X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\Definitions.FPSExperiment.h"
-/Fo"X:\Repo\UnrealFPS\DEATH\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\FPSExperimentProjectile.cpp.obj"
+/FI"X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\FPSExperimentEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Yu"X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\FPSExperimentEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h"
+/Fp"X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\FPSExperimentEditor\Development\Engine\SharedPCH.Engine.ShadowErrors.h.pch"
+"X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Source\FPSExperiment\FPSExperimentProjectile.cpp"
+/FI"X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\Definitions.FPSExperiment.h"
+/Fo"X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\FPSExperimentProjectile.cpp.obj"
 /TP
 /GR-
 /W4

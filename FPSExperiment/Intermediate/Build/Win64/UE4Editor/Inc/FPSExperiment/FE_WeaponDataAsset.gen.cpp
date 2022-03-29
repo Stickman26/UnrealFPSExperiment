@@ -119,11 +119,11 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxAmmoReserves_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFInt16PropertyParams NewProp_MaxAmmoReserves;
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_MaxAmmoReserves;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxLoadedAmmo_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFInt16PropertyParams NewProp_MaxLoadedAmmo;
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_MaxLoadedAmmo;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ReloadTime_MetaData[];
 #endif
@@ -151,7 +151,7 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_NumberOfProjectilesPerShot_MetaData[];
 #endif
-		static const UE4CodeGen_Private::FFInt16PropertyParams NewProp_NumberOfProjectilesPerShot;
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_NumberOfProjectilesPerShot;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DamagePerPellet_MetaData[];
 #endif
@@ -231,14 +231,14 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 		{ "ToolTip", "Variables regarding ammuntion and reloading" },
 	};
 #endif
-	const UE4CodeGen_Private::FFInt16PropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves = { "MaxAmmoReserves", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt16, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, MaxAmmoReserves), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves_MetaData)) };
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves = { "MaxAmmoReserves", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, MaxAmmoReserves), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo_MetaData[] = {
 		{ "Category", "Ammuntion/Reloading" },
 		{ "ModuleRelativePath", "FE_WeaponDataAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FFInt16PropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo = { "MaxLoadedAmmo", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt16, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, MaxLoadedAmmo), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo_MetaData)) };
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo = { "MaxLoadedAmmo", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, MaxLoadedAmmo), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_ReloadTime_MetaData[] = {
 		{ "Category", "Ammuntion/Reloading" },
@@ -280,7 +280,7 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_DamagePerShot_MetaData[] = {
 		{ "Category", "Hit Scan" },
 		{ "Comment", "//Variables for hit scan weapons\n" },
-		{ "EditCondition", "weaponType == WeaponType::HitScan" },
+		{ "EditCondition", "Type == WeaponType::HitScan" },
 		{ "ModuleRelativePath", "FE_WeaponDataAsset.h" },
 		{ "ToolTip", "Variables for hit scan weapons" },
 	};
@@ -290,16 +290,16 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_NumberOfProjectilesPerShot_MetaData[] = {
 		{ "Category", "Scatter" },
 		{ "Comment", "//Variables for scatter weapons\n" },
-		{ "EditCondition", "weaponType == WeaponType::Scatter" },
+		{ "EditCondition", "Type == WeaponType::Scatter" },
 		{ "ModuleRelativePath", "FE_WeaponDataAsset.h" },
 		{ "ToolTip", "Variables for scatter weapons" },
 	};
 #endif
-	const UE4CodeGen_Private::FFInt16PropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_NumberOfProjectilesPerShot = { "NumberOfProjectilesPerShot", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::UInt16, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, NumberOfProjectilesPerShot), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_NumberOfProjectilesPerShot_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_NumberOfProjectilesPerShot_MetaData)) };
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_NumberOfProjectilesPerShot = { "NumberOfProjectilesPerShot", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, NumberOfProjectilesPerShot), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_NumberOfProjectilesPerShot_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_NumberOfProjectilesPerShot_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_DamagePerPellet_MetaData[] = {
 		{ "Category", "Scatter" },
-		{ "EditCondition", "weaponType == WeaponType::Scatter" },
+		{ "EditCondition", "Type == WeaponType::Scatter" },
 		{ "ModuleRelativePath", "FE_WeaponDataAsset.h" },
 	};
 #endif
@@ -308,7 +308,7 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_Projectile_MetaData[] = {
 		{ "Category", "Projectile" },
 		{ "Comment", "//Variables for projectile weapons\n" },
-		{ "EditCondition", "weaponType == WeaponType::Projectile" },
+		{ "EditCondition", "Type == WeaponType::Projectile" },
 		{ "ModuleRelativePath", "FE_WeaponDataAsset.h" },
 		{ "ToolTip", "Variables for projectile weapons" },
 	};
@@ -360,7 +360,7 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UFE_WeaponDataAsset, 3922804754);
+	IMPLEMENT_CLASS(UFE_WeaponDataAsset, 859031865);
 	template<> FPSEXPERIMENT_API UClass* StaticClass<UFE_WeaponDataAsset>()
 	{
 		return UFE_WeaponDataAsset::StaticClass();
