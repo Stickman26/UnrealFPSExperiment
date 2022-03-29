@@ -156,6 +156,8 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Gun Properties")
 	float CurrentWeaponSpread;
 
+	FTimerHandle BulletSpreadTimerHandler;
+
 protected:
 	//Applies bullet spread on shot
 	FVector BulletSpreadModifier(FVector Forward);

@@ -25,63 +25,63 @@ class FPSEXPERIMENT_API UFE_WeaponDataAsset : public UDataAsset
 	//General Variables regarding weapons
 public:
 	UPROPERTY(EditAnywhere)
-	FString WeaponName;
+	FString Name;
 
 	UPROPERTY(EditAnywhere)
-	TEnumAsByte<WeaponType> WeaponType;
+	TEnumAsByte<WeaponType> Type;
 
 	UPROPERTY(EditAnywhere)
-	bool WeaponIsFullAuto;
+	bool IsFullAuto;
 
 	UPROPERTY(EditAnywhere, meta = (EditCondition = "!WeaponIsFullAuto"))
-	float WeaponShotDelay;
+	float ShotDelay;
 
 	UPROPERTY(EditAnywhere, meta = (EditCondition = "WeaponIsFullAuto"))
-	float WeaponFireRate;
+	float FireRate;
 
 	UPROPERTY(EditAnywhere)
-	float WeaponDrawStowTime;
+	float DrawStowTime;
 
 	//Variables regarding ammuntion and reloading
 
 	UPROPERTY(Category = "Ammuntion/Reloading", EditAnywhere)
-	uint16 WeaponMaxAmmoReserves;
+	uint16 MaxAmmoReserves;
 
 	UPROPERTY(Category = "Ammuntion/Reloading", EditAnywhere)
-	uint16 WeaponMaxLoadedAmmo;
+	uint16 MaxLoadedAmmo;
 
 	UPROPERTY(Category = "Ammuntion/Reloading", EditAnywhere)
-	float WeaponReloadTime;
+	float ReloadTime;
 
-	//Variable regarding bullet scatter values
+	//Variable regarding bullet spread values
+
+	UPROPERTY(Category = "Weapon Bullet Spread", EditAnywhere)
+	float MinimumSpreadAngle;
+
+	UPROPERTY(Category = "Weapon Bullet Spread", EditAnywhere)
+	float MaximumSpreadAngle;
+
+	UPROPERTY(Category = "Weapon Bullet Spread", EditAnywhere)
+	float SpreadAngleIncreasePerShot;
 
 	UPROPERTY(Category = "Weapon Bullet Scatter", EditAnywhere)
-	float WeaponMinimumScatterValue;
-
-	UPROPERTY(Category = "Weapon Bullet Scatter", EditAnywhere)
-	float WeaponMaximumScatterValue;
-
-	UPROPERTY(Category = "Weapon Bullet Scatter", EditAnywhere)
-	float WeaponScatterValueIncreasePerShot;
-
-	UPROPERTY(Category = "Weapon Bullet Scatter", EditAnywhere)
-	float WeaponScatterValueDecreasePerTick;
+	float SpreadAngleDecreasePerTick;
 	
 	//Variables for hit scan weapons
 
 	UPROPERTY(Category = "Hit Scan", EditAnywhere, meta = (EditCondition = "weaponType == WeaponType::HitScan"))
-	float WeaponDamagePerShot;
+	float DamagePerShot;
 
 	//Variables for scatter weapons
 
 	UPROPERTY(Category = "Scatter", EditAnywhere, meta=(EditCondition = "weaponType == WeaponType::Scatter"))
-	uint16 WeaponNumberOfProjectilesPerShot = 5;
+	uint16 NumberOfProjectilesPerShot = 5;
 	
 	UPROPERTY(Category = "Scatter", EditAnywhere, meta = (EditCondition = "weaponType == WeaponType::Scatter"))
-	float WeaponDamagePerPellet;
+	float DamagePerPellet;
 
 	//Variables for projectile weapons
 
 	UPROPERTY(Category = "Projectile", EditAnywhere, meta = (EditCondition = "weaponType == WeaponType::Projectile"))
-	TAssetSubclassOf<AActor> WeaponProjectile;
+	TAssetSubclassOf<AActor> Projectile;
 };

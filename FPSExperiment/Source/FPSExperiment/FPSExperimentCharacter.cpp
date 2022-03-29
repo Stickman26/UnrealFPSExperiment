@@ -119,6 +119,9 @@ void AFPSExperimentCharacter::BeginPlay()
 		VR_Gun->SetHiddenInGame(true, true);
 		Mesh1P->SetHiddenInGame(false, true);
 	}
+
+	//Start bullet spread decrease timer
+	GetWorldTimerManager().SetTimer(BulletSpreadTimerHandler, this, &AFPSExperimentCharacter::BulletSpreadDecrease, 0.1f, true, 0.1f);
 }
 
 //////////////////////////////////////////////////////////////////////////
@@ -162,7 +165,7 @@ void AFPSExperimentCharacter::OnFire()
 		return;
 	}
 
-	if (ActiveWeapon->WeaponType == WeaponType::HitScan)
+	if (ActiveWeapon->Type == WeaponType::HitScan)
 	{
 		FHitResult Hit;
 		float RayLength = 300;
@@ -177,11 +180,11 @@ void AFPSExperimentCharacter::OnFire()
 		ActorLineTraceSingle(Hit, StartLocation, EndLocation, ECollisionChannel::ECC_WorldDynamic, CollisionParameters);
 		DrawDebugLine(GetWorld(), StartLocation, EndLocation, FColor::Green, true, -1, 0, 1.f);
 	}
-	else if (ActiveWeapon->WeaponType == WeaponType::Scatter)
+	else if (ActiveWeapon->Type == WeaponType::Scatter)
 	{
 
 	}
-	else if (ActiveWeapon->WeaponType == WeaponType::Projectile)
+	else if (ActiveWeapon->Type == WeaponType::Projectile)
 	{
 		// try and fire a projectile
 		if (ProjectileClass != nullptr)
@@ -361,11 +364,11 @@ void AFPSExperimentCharacter::BulletSpreadIncrease()
 {
 	if (ActiveWeapon != nullptr)
 	{
-		CurrentWeaponSpread += ActiveWeapon->WeaponScatterValueIncreasePerShot;
+		CurrentWeaponSpread += ActiveWeapon->SpreadAngleIncreasePerShot;
 
-		if (CurrentWeaponSpread >= ActiveWeapon->WeaponMaximumScatterValue)
+		if (CurrentWeaponSpread >= ActiveWeapon->MaximumSpreadAngle)
 		{
-			CurrentWeaponSpread = ActiveWeapon->WeaponMaximumScatterValue;
+			CurrentWeaponSpread = ActiveWeapon->MaximumSpreadAngle;
 		}
 	}
 	else
@@ -378,13 +381,13 @@ void AFPSExperimentCharacter::BulletSpreadDecrease()
 {
 	if (ActiveWeapon != nullptr)
 	{
-		if (CurrentWeaponSpread <= ActiveWeapon->WeaponMinimumScatterValue)
+		if (CurrentWeaponSpread <= ActiveWeapon->MinimumSpreadAngle)
 		{
-			CurrentWeaponSpread = ActiveWeapon->WeaponMinimumScatterValue;
+			CurrentWeaponSpread = ActiveWeapon->MinimumSpreadAngle;
 		}
 		else
 		{
-			CurrentWeaponSpread -= ActiveWeapon->WeaponScatterValueDecreasePerTick;
+			CurrentWeaponSpread -= ActiveWeapon->SpreadAngleDecreasePerTick;
 		}
 	}
 	else

@@ -1,8 +1,8 @@
 {
 	"SourceFiles": [
-		"X:\\Repo\\UnrealFPS\\UnrealFPSExperiment\\FPSExperiment\\Source\\FPSExperiment\\FPSExperiment.Build.cs",
-		"X:\\Repo\\UnrealFPS\\UnrealFPSExperiment\\FPSExperiment\\Source\\FPSExperiment.Target.cs",
-		"X:\\Repo\\UnrealFPS\\UnrealFPSExperiment\\FPSExperiment\\Source\\FPSExperimentEditor.Target.cs"
+		"X:\\Repo\\UnrealFPS\\DEATH\\UnrealFPSExperiment\\FPSExperiment\\Source\\FPSExperiment\\FPSExperiment.Build.cs",
+		"X:\\Repo\\UnrealFPS\\DEATH\\UnrealFPSExperiment\\FPSExperiment\\Source\\FPSExperiment.Target.cs",
+		"X:\\Repo\\UnrealFPS\\DEATH\\UnrealFPSExperiment\\FPSExperiment\\Source\\FPSExperimentEditor.Target.cs"
 	],
 	"EngineVersion": "4.27.1"
 }
