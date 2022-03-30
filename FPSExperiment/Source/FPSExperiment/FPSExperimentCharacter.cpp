@@ -14,6 +14,7 @@
 #include "DrawDebugHelpers.h"
 #include "Math/UnrealMathUtility.h"
 #include "FE_WeaponDataAsset.h"
+#include "TargetReticleUI.h"
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 

@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define FPSEXPERIMENT_FPSExperimentCharacter_generated_h
 
-#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_SPARSE_DATA
-#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_RPC_WRAPPERS
-#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS
-#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_INCLASS_NO_PURE_DECLS \
+#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_SPARSE_DATA
+#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_RPC_WRAPPERS
+#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS
+#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesAFPSExperimentCharacter(); \
 	friend struct Z_Construct_UClass_AFPSExperimentCharacter_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(AFPSExperimentCharacter)
 
 
-#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_INCLASS \
+#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_INCLASS \
 private: \
 	static void StaticRegisterNativesAFPSExperimentCharacter(); \
 	friend struct Z_Construct_UClass_AFPSExperimentCharacter_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(AFPSExperimentCharacter)
 
 
-#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_STANDARD_CONSTRUCTORS \
+#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API AFPSExperimentCharacter(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(AFPSExperimentCharacter) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_ENHANCED_CONSTRUCTORS \
+#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API AFPSExperimentCharacter(AFPSExperimentCharacter&&); \
@@ -58,7 +58,7 @@ public: \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(AFPSExperimentCharacter)
 
 
-#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
+#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_PRIVATE_PROPERTY_OFFSET \
 	FORCEINLINE static uint32 __PPO__Mesh1P() { return STRUCT_OFFSET(AFPSExperimentCharacter, Mesh1P); } \
 	FORCEINLINE static uint32 __PPO__FP_Gun() { return STRUCT_OFFSET(AFPSExperimentCharacter, FP_Gun); } \
 	FORCEINLINE static uint32 __PPO__FP_MuzzleLocation() { return STRUCT_OFFSET(AFPSExperimentCharacter, FP_MuzzleLocation); } \
@@ -70,27 +70,27 @@ public: \
 	FORCEINLINE static uint32 __PPO__CurrentWeaponSpread() { return STRUCT_OFFSET(AFPSExperimentCharacter, CurrentWeaponSpread); }
 
 
-#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_18_PROLOG
-#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_GENERATED_BODY_LEGACY \
+#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_19_PROLOG
+#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
-	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_SPARSE_DATA \
-	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_RPC_WRAPPERS \
-	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_INCLASS \
-	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_STANDARD_CONSTRUCTORS \
+	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_PRIVATE_PROPERTY_OFFSET \
+	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_SPARSE_DATA \
+	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_RPC_WRAPPERS \
+	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_INCLASS \
+	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_GENERATED_BODY \
+#define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_PRIVATE_PROPERTY_OFFSET \
-	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_SPARSE_DATA \
-	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_RPC_WRAPPERS_NO_PURE_DECLS \
-	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_INCLASS_NO_PURE_DECLS \
-	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_21_ENHANCED_CONSTRUCTORS \
+	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_PRIVATE_PROPERTY_OFFSET \
+	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_SPARSE_DATA \
+	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_RPC_WRAPPERS_NO_PURE_DECLS \
+	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_INCLASS_NO_PURE_DECLS \
+	FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_22_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

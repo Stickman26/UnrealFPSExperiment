@@ -14,6 +14,7 @@ class UMotionControllerComponent;
 class UAnimMontage;
 class USoundBase;
 class UFE_WeaponDataAsset;
+class UTargetReticleUI;
 
 UCLASS(config=Game)
 class AFPSExperimentCharacter : public ACharacter
@@ -148,6 +149,13 @@ public:
 /*
  * Additional Functions and Variables added
  */
+//protected:
+	/*UPROPERTY(EditDefaultsOnly, Category = "UI")
+	TSubclassOf<UTargetReticleUI> TargetReticleClass;
+
+	UPROPERTY(Catergory = "UI")
+	UTargetReticleUI* TargetReticleReference;*/
+
 public:
 	UPROPERTY(EditAnywhere, Category = "Gun Properties")
 	UFE_WeaponDataAsset* ActiveWeapon;
