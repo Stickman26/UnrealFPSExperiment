@@ -17,19 +17,6 @@
 
 DEFINE_LOG_CATEGORY_STATIC(LogFPChar, Warning, All);
 
-//////////////////////////////////////////////////////////////////////////
-// AFPSExperimentCharacter
-/*******************************************************************************
-	Modifications to make
-	- Add hit scan capabilities
-		- Include Debugging mode
-	- Add scatter shot capabilities
-		- Include Debugging mode
-	- Find way of feeding Data from Weapon Data Assets to pipeline
-	- Add variables for each relivant piece of data based on Weapon Data Assets
-
-********************************************************************************/
-
 AFPSExperimentCharacter::AFPSExperimentCharacter()
 {
 	// Set size for collision capsule
@@ -168,22 +155,34 @@ void AFPSExperimentCharacter::OnFire()
 	if (ActiveWeapon->Type == WeaponType::HitScan)
 	{
 		FHitResult Hit;
-		float RayLength = 300;
 		FVector StartLocation = FirstPersonCameraComponent->GetComponentLocation();
 
-		//Increase Spread of bullet
 		BulletSpreadIncrease();
-		FVector SpreadForward = BulletSpreadModifier(FirstPersonCameraComponent->GetForwardVector() * RayLength);
+		FVector EndPoint = BulletSpreadModifier(FirstPersonCameraComponent->GetForwardVector(), FirstPersonCameraComponent->GetUpVector(), FirstPersonCameraComponent->GetRightVector());
 
-		FVector EndLocation = StartLocation + (SpreadForward);
+		FVector EndLocation = StartLocation + (EndPoint);
 		FCollisionQueryParams CollisionParameters;
 		ActorLineTraceSingle(Hit, StartLocation, EndLocation, ECollisionChannel::ECC_WorldDynamic, CollisionParameters);
-		DrawDebugLine(GetWorld(), StartLocation, EndLocation, FColor::Green, true, -1, 0, 1.f);
+		DrawDebugLine(GetWorld(), StartLocation, EndLocation, FColor::Green, true, 0.5f, 0, 1.f);
 	}
+
 	else if (ActiveWeapon->Type == WeaponType::Scatter)
 	{
+		FHitResult Hit;
+		FVector StartLocation = FirstPersonCameraComponent->GetComponentLocation();
 
+		BulletSpreadIncrease();
+		for (int i = 0; i < ActiveWeapon->NumberOfProjectilesPerShot; ++i)
+		{
+			FVector EndPoint = BulletSpreadModifier(FirstPersonCameraComponent->GetForwardVector(), FirstPersonCameraComponent->GetUpVector(), FirstPersonCameraComponent->GetRightVector());
+
+			FVector EndLocation = StartLocation + (EndPoint);
+			FCollisionQueryParams CollisionParameters;
+			ActorLineTraceSingle(Hit, StartLocation, EndLocation, ECollisionChannel::ECC_WorldDynamic, CollisionParameters);
+			DrawDebugLine(GetWorld(), StartLocation, EndLocation, FColor::Green, true, 0.5f, 0, 1.f);
+		}
 	}
+
 	else if (ActiveWeapon->Type == WeaponType::Projectile)
 	{
 		// try and fire a projectile
@@ -348,16 +347,27 @@ bool AFPSExperimentCharacter::EnableTouchscreenMovement(class UInputComponent* P
 
 //Additional Functions
 
-FVector AFPSExperimentCharacter::BulletSpreadModifier(FVector Forward)
+FVector AFPSExperimentCharacter::BulletSpreadModifier(FVector Forward, FVector Up, FVector Right)
 {
-	FVector ModifiedForward = Forward;
+	//Initial variables
+	FVector ModifiedEndPoint = FVector::ZeroVector;
 	float spreadModifier = CurrentWeaponSpread;
+	float BulletDistance = ActiveWeapon->BulletRange;
+	
+	//Find modified trajectory
+	float Angle = FMath::FRandRange(0.f, 360.f);
+	float Radius = BulletDistance * FMath::Tan(FMath::DegreesToRadians(CurrentWeaponSpread));
+	float DistanceFromCenter = FMath::FRandRange(0.f, Radius);
 
-	ModifiedForward.X += FMath::RandRange(-spreadModifier, spreadModifier);
-	ModifiedForward.Y += FMath::RandRange(-spreadModifier, spreadModifier);
-	ModifiedForward.Z += FMath::RandRange(-spreadModifier, spreadModifier);
+	float X = DistanceFromCenter * FMath::Cos(FMath::DegreesToRadians(Angle));
+	float Y = DistanceFromCenter * FMath::Sin(FMath::DegreesToRadians(Angle));
 
-	return ModifiedForward;
+	//Apply change in X and Y to Find End Point
+	ModifiedEndPoint = Forward * BulletDistance;
+	ModifiedEndPoint += Right * X;
+	ModifiedEndPoint += Up * Y;
+
+	return ModifiedEndPoint;
 }
 
 void AFPSExperimentCharacter::BulletSpreadIncrease()

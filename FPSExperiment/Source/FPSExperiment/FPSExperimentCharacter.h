@@ -160,7 +160,7 @@ private:
 
 protected:
 	//Applies bullet spread on shot
-	FVector BulletSpreadModifier(FVector Forward);
+	FVector BulletSpreadModifier(FVector Forward, FVector Up, FVector Right);
 	//Increases bullet spread when called - Used in OnFire()
 	void BulletSpreadIncrease();
 	//Decreases bullet spread when called - Used in OnTick()

@@ -145,6 +145,10 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_SpreadAngleDecreasePerTick;
 #if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_BulletRange_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_BulletRange;
+#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DamagePerShot_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DamagePerShot;
@@ -203,7 +207,7 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_ShotDelay_MetaData[] = {
 		{ "Category", "FE_WeaponDataAsset" },
-		{ "EditCondition", "!WeaponIsFullAuto" },
+		{ "EditCondition", "!IsFullAuto" },
 		{ "ModuleRelativePath", "FE_WeaponDataAsset.h" },
 	};
 #endif
@@ -211,7 +215,7 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_FireRate_MetaData[] = {
 		{ "Category", "FE_WeaponDataAsset" },
-		{ "EditCondition", "WeaponIsFullAuto" },
+		{ "EditCondition", "IsFullAuto" },
 		{ "ModuleRelativePath", "FE_WeaponDataAsset.h" },
 	};
 #endif
@@ -271,11 +275,18 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_SpreadAngleIncreasePerShot = { "SpreadAngleIncreasePerShot", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, SpreadAngleIncreasePerShot), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_SpreadAngleIncreasePerShot_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_SpreadAngleIncreasePerShot_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_SpreadAngleDecreasePerTick_MetaData[] = {
-		{ "Category", "Weapon Bullet Scatter" },
+		{ "Category", "Weapon Bullet Spread" },
 		{ "ModuleRelativePath", "FE_WeaponDataAsset.h" },
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_SpreadAngleDecreasePerTick = { "SpreadAngleDecreasePerTick", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, SpreadAngleDecreasePerTick), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_SpreadAngleDecreasePerTick_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_SpreadAngleDecreasePerTick_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_BulletRange_MetaData[] = {
+		{ "Category", "Weapon Bullet Spread" },
+		{ "ModuleRelativePath", "FE_WeaponDataAsset.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_BulletRange = { "BulletRange", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, BulletRange), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_BulletRange_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_BulletRange_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_DamagePerShot_MetaData[] = {
 		{ "Category", "Hit Scan" },
@@ -328,6 +339,7 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaximumSpreadAngle,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_SpreadAngleIncreasePerShot,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_SpreadAngleDecreasePerTick,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_BulletRange,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_DamagePerShot,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_NumberOfProjectilesPerShot,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_DamagePerPellet,
@@ -360,7 +372,7 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UFE_WeaponDataAsset, 859031865);
+	IMPLEMENT_CLASS(UFE_WeaponDataAsset, 2718233138);
 	template<> FPSEXPERIMENT_API UClass* StaticClass<UFE_WeaponDataAsset>()
 	{
 		return UFE_WeaponDataAsset::StaticClass();

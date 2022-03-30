@@ -33,10 +33,10 @@ public:
 	UPROPERTY(EditAnywhere)
 	bool IsFullAuto;
 
-	UPROPERTY(EditAnywhere, meta = (EditCondition = "!WeaponIsFullAuto"))
+	UPROPERTY(EditAnywhere, meta = (EditCondition = "!IsFullAuto"))
 	float ShotDelay;
 
-	UPROPERTY(EditAnywhere, meta = (EditCondition = "WeaponIsFullAuto"))
+	UPROPERTY(EditAnywhere, meta = (EditCondition = "IsFullAuto"))
 	float FireRate;
 
 	UPROPERTY(EditAnywhere)
@@ -64,8 +64,11 @@ public:
 	UPROPERTY(Category = "Weapon Bullet Spread", EditAnywhere)
 	float SpreadAngleIncreasePerShot;
 
-	UPROPERTY(Category = "Weapon Bullet Scatter", EditAnywhere)
+	UPROPERTY(Category = "Weapon Bullet Spread", EditAnywhere)
 	float SpreadAngleDecreasePerTick;
+
+	UPROPERTY(Category = "Weapon Bullet Spread", EditAnywhere)
+	float BulletRange = 10000.0f;
 	
 	//Variables for hit scan weapons
 
