@@ -51,6 +51,12 @@ public:
 	int MaxLoadedAmmo;
 
 	UPROPERTY(Category = "Ammuntion/Reloading", EditAnywhere)
+	int CurrentLoadedAmmo;
+
+	UPROPERTY(Category = "Ammuntion/Reloading", EditAnywhere)
+	int CurrentAmmoReserves;
+
+	UPROPERTY(Category = "Ammuntion/Reloading", EditAnywhere)
 	float ReloadTime;
 
 	//Variable regarding bullet spread values

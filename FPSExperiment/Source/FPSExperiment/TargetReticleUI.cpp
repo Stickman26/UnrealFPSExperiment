@@ -3,3 +3,7 @@
 
 #include "TargetReticleUI.h"
 
+bool UTargetReticleUI::Initialize()
+{
+
+}

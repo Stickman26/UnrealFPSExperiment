@@ -90,8 +90,12 @@ public:
 
 protected:
 	
-	/** Fires a projectile. */
-	void OnFire();
+	/** New: Initiates call for weapoon firing, single fire or full auto */
+	void StartFire();
+	/** New: Release trigger, used for fullauto */
+	void StopFire();
+	/** New: Manages weapon firing, allowing OnFire and OnFireRelease to distinguish full auto vs single fire */
+	void FireWeapon();
 
 	/** Resets HMD orientation and position in VR. */
 	void OnResetVR();
@@ -165,6 +169,7 @@ private:
 	float CurrentWeaponSpread;
 
 	FTimerHandle BulletSpreadTimerHandler;
+	FTimerHandle AutomaticFireTimer;
 
 protected:
 	//Applies bullet spread on shot

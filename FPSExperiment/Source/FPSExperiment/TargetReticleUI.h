@@ -14,4 +14,17 @@ class FPSEXPERIMENT_API UTargetReticleUI : public UUserWidget
 {
 	GENERATED_BODY()
 	
+private:
+	//Dynamic material
+	//Player reference
+	void placeholder() { return; };
+
+protected:
+	virtual bool Initialize() override;
+
+	/*
+	On Tick will need to implemented for dynamic circle
+	
+	Helper function to modify circle dynamic material
+	*/
 };

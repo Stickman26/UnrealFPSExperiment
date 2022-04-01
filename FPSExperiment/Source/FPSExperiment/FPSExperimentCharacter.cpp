@@ -125,7 +125,8 @@ void AFPSExperimentCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
 
 	// Bind fire event
-	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AFPSExperimentCharacter::OnFire);
+	PlayerInputComponent->BindAction("Fire", IE_Pressed, this, &AFPSExperimentCharacter::StartFire);
+	PlayerInputComponent->BindAction("Fire", IE_Released, this, &AFPSExperimentCharacter::StopFire);
 
 	// Enable touchscreen input
 	EnableTouchscreenMovement(PlayerInputComponent);
@@ -145,7 +146,21 @@ void AFPSExperimentCharacter::SetupPlayerInputComponent(class UInputComponent* P
 	PlayerInputComponent->BindAxis("LookUpRate", this, &AFPSExperimentCharacter::LookUpAtRate);
 }
 
-void AFPSExperimentCharacter::OnFire()
+void AFPSExperimentCharacter::StartFire()
+{
+	FireWeapon();
+
+	if(ActiveWeapon->IsFullAuto)
+		GetWorldTimerManager().SetTimer(AutomaticFireTimer, this, &AFPSExperimentCharacter::FireWeapon, ActiveWeapon->FireRate, true);
+}
+
+void AFPSExperimentCharacter::StopFire()
+{
+	if (ActiveWeapon->IsFullAuto)
+		GetWorldTimerManager().ClearTimer(AutomaticFireTimer);
+}
+
+void AFPSExperimentCharacter::FireWeapon()
 {
 	if (ActiveWeapon == nullptr)
 	{
@@ -233,6 +248,7 @@ void AFPSExperimentCharacter::OnFire()
 	}
 }
 
+
 void AFPSExperimentCharacter::OnResetVR()
 {
 	UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition();
@@ -246,7 +262,7 @@ void AFPSExperimentCharacter::BeginTouch(const ETouchIndex::Type FingerIndex, co
 	}
 	if ((FingerIndex == TouchItem.FingerIndex) && (TouchItem.bMoved == false))
 	{
-		OnFire();
+		//StartFire();
 	}
 	TouchItem.bIsPressed = true;
 	TouchItem.FingerIndex = FingerIndex;
