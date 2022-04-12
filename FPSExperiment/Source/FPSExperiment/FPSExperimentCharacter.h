@@ -124,8 +124,19 @@ private:
 	UPROPERTY(EditAnywhere, Category = "Gun Properties")
 	float CurrentWeaponSpread;
 
-	FTimerHandle BulletSpreadTimerHandler;
-	FTimerHandle AutomaticFireTimer;
+	UPROPERTY(EditAnywhere, Category = "Gun Properties")
+	int CurrentLoadedAmmo;
+
+	UPROPERTY(EditAnywhere, Category = "Gun Properties")
+	int CurrentReserveAmmo;
+
+	FTimerHandle BulletSpreadTimerHandler; //Manages bullet spread decrease over time
+	FTimerHandle FireDelayTimer; //Manages timing between shots in general
+	FTimerHandle AutomaticFireTimer; //Manages timing between shots for automatic weapons
+	FTimerHandle ReloadTimer; //Manages timing of reload
+	FTimerHandle WeaponSwapTimer; //Manages timing of weapon swaping
+
+	bool CanFire = true;
 
 protected:
 	//Applies bullet spread on shot
@@ -134,6 +145,11 @@ protected:
 	void BulletSpreadIncrease();
 	//Decreases bullet spread when called - Used in OnTick()
 	void BulletSpreadDecrease();
+	//Reload
+	void CallReload(); //this is the function to call reload, will check if reload is needed
+	void Reload(); //the operation for reloading the weapon, used by timers
+	//Handles Weapon Swaping
+	void SwapWeapon(UFE_WeaponDataAsset SwapWeapon);
 
 };
 

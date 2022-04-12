@@ -88,6 +88,14 @@ void EmptyLinkFunctionForGeneratedCodeFPSExperimentCharacter() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentWeaponSpread_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_CurrentWeaponSpread;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentLoadedAmmo_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_CurrentLoadedAmmo;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentReserveAmmo_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_CurrentReserveAmmo;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -212,6 +220,20 @@ void EmptyLinkFunctionForGeneratedCodeFPSExperimentCharacter() {}
 	};
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_CurrentWeaponSpread = { "CurrentWeaponSpread", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSExperimentCharacter, CurrentWeaponSpread), METADATA_PARAMS(Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_CurrentWeaponSpread_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_CurrentWeaponSpread_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_CurrentLoadedAmmo_MetaData[] = {
+		{ "Category", "Gun Properties" },
+		{ "ModuleRelativePath", "FPSExperimentCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_CurrentLoadedAmmo = { "CurrentLoadedAmmo", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSExperimentCharacter, CurrentLoadedAmmo), METADATA_PARAMS(Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_CurrentLoadedAmmo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_CurrentLoadedAmmo_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_CurrentReserveAmmo_MetaData[] = {
+		{ "Category", "Gun Properties" },
+		{ "ModuleRelativePath", "FPSExperimentCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_CurrentReserveAmmo = { "CurrentReserveAmmo", nullptr, (EPropertyFlags)0x0040000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AFPSExperimentCharacter, CurrentReserveAmmo), METADATA_PARAMS(Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_CurrentReserveAmmo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_CurrentReserveAmmo_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AFPSExperimentCharacter_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_Mesh1P,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_FP_Gun,
@@ -225,6 +247,8 @@ void EmptyLinkFunctionForGeneratedCodeFPSExperimentCharacter() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_FireAnimation,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_ActiveWeapon,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_CurrentWeaponSpread,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_CurrentLoadedAmmo,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AFPSExperimentCharacter_Statics::NewProp_CurrentReserveAmmo,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AFPSExperimentCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AFPSExperimentCharacter>::IsAbstract,
@@ -253,7 +277,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSExperimentCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AFPSExperimentCharacter, 587404489);
+	IMPLEMENT_CLASS(AFPSExperimentCharacter, 3471001194);
 	template<> FPSEXPERIMENT_API UClass* StaticClass<AFPSExperimentCharacter>()
 	{
 		return AFPSExperimentCharacter::StaticClass();

@@ -33,10 +33,7 @@ public:
 	UPROPERTY(EditAnywhere)
 	bool IsFullAuto;
 
-	UPROPERTY(EditAnywhere, meta = (EditCondition = "!IsFullAuto"))
-	float ShotDelay;
-
-	UPROPERTY(EditAnywhere, meta = (EditCondition = "IsFullAuto"))
+	UPROPERTY(EditAnywhere)
 	float FireRate;
 
 	UPROPERTY(EditAnywhere)
@@ -45,10 +42,10 @@ public:
 	//Variables regarding ammuntion and reloading
 
 	UPROPERTY(Category = "Ammuntion/Reloading", EditAnywhere)
-	int MaxAmmoReserves;
+	int MaxLoadedAmmo;
 
 	UPROPERTY(Category = "Ammuntion/Reloading", EditAnywhere)
-	int MaxLoadedAmmo;
+	int MaxAmmoReserves;
 
 	UPROPERTY(Category = "Ammuntion/Reloading", EditAnywhere)
 	int CurrentLoadedAmmo;

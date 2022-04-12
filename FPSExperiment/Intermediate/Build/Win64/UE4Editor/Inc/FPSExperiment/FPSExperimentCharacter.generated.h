@@ -63,7 +63,9 @@ public: \
 	FORCEINLINE static uint32 __PPO__FP_Gun() { return STRUCT_OFFSET(AFPSExperimentCharacter, FP_Gun); } \
 	FORCEINLINE static uint32 __PPO__FP_MuzzleLocation() { return STRUCT_OFFSET(AFPSExperimentCharacter, FP_MuzzleLocation); } \
 	FORCEINLINE static uint32 __PPO__FirstPersonCameraComponent() { return STRUCT_OFFSET(AFPSExperimentCharacter, FirstPersonCameraComponent); } \
-	FORCEINLINE static uint32 __PPO__CurrentWeaponSpread() { return STRUCT_OFFSET(AFPSExperimentCharacter, CurrentWeaponSpread); }
+	FORCEINLINE static uint32 __PPO__CurrentWeaponSpread() { return STRUCT_OFFSET(AFPSExperimentCharacter, CurrentWeaponSpread); } \
+	FORCEINLINE static uint32 __PPO__CurrentLoadedAmmo() { return STRUCT_OFFSET(AFPSExperimentCharacter, CurrentLoadedAmmo); } \
+	FORCEINLINE static uint32 __PPO__CurrentReserveAmmo() { return STRUCT_OFFSET(AFPSExperimentCharacter, CurrentReserveAmmo); }
 
 
 #define FPSExperiment_Source_FPSExperiment_FPSExperimentCharacter_h_19_PROLOG

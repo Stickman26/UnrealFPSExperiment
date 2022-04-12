@@ -105,10 +105,6 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 		static void NewProp_IsFullAuto_SetBit(void* Obj);
 		static const UE4CodeGen_Private::FBoolPropertyParams NewProp_IsFullAuto;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ShotDelay_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_ShotDelay;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_FireRate_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_FireRate;
@@ -117,13 +113,13 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 #endif
 		static const UE4CodeGen_Private::FFloatPropertyParams NewProp_DrawStowTime;
 #if WITH_METADATA
-		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxAmmoReserves_MetaData[];
-#endif
-		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_MaxAmmoReserves;
-#if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxLoadedAmmo_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_MaxLoadedAmmo;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_MaxAmmoReserves_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FUnsizedIntPropertyParams NewProp_MaxAmmoReserves;
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_CurrentLoadedAmmo_MetaData[];
 #endif
@@ -213,17 +209,8 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 	}
 	const UE4CodeGen_Private::FBoolPropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_IsFullAuto = { "IsFullAuto", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Bool | UE4CodeGen_Private::EPropertyGenFlags::NativeBool, RF_Public|RF_Transient|RF_MarkAsNative, 1, sizeof(bool), sizeof(UFE_WeaponDataAsset), &Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_IsFullAuto_SetBit, METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_IsFullAuto_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_IsFullAuto_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_ShotDelay_MetaData[] = {
-		{ "Category", "FE_WeaponDataAsset" },
-		{ "EditCondition", "!IsFullAuto" },
-		{ "ModuleRelativePath", "FE_WeaponDataAsset.h" },
-	};
-#endif
-	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_ShotDelay = { "ShotDelay", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, ShotDelay), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_ShotDelay_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_ShotDelay_MetaData)) };
-#if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_FireRate_MetaData[] = {
 		{ "Category", "FE_WeaponDataAsset" },
-		{ "EditCondition", "IsFullAuto" },
 		{ "ModuleRelativePath", "FE_WeaponDataAsset.h" },
 	};
 #endif
@@ -236,21 +223,21 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 #endif
 	const UE4CodeGen_Private::FFloatPropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_DrawStowTime = { "DrawStowTime", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Float, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, DrawStowTime), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_DrawStowTime_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_DrawStowTime_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo_MetaData[] = {
 		{ "Category", "Ammuntion/Reloading" },
 		{ "Comment", "//Variables regarding ammuntion and reloading\n" },
 		{ "ModuleRelativePath", "FE_WeaponDataAsset.h" },
 		{ "ToolTip", "Variables regarding ammuntion and reloading" },
 	};
 #endif
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves = { "MaxAmmoReserves", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, MaxAmmoReserves), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves_MetaData)) };
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo = { "MaxLoadedAmmo", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, MaxLoadedAmmo), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo_MetaData)) };
 #if WITH_METADATA
-	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo_MetaData[] = {
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves_MetaData[] = {
 		{ "Category", "Ammuntion/Reloading" },
 		{ "ModuleRelativePath", "FE_WeaponDataAsset.h" },
 	};
 #endif
-	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo = { "MaxLoadedAmmo", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, MaxLoadedAmmo), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo_MetaData)) };
+	const UE4CodeGen_Private::FUnsizedIntPropertyParams Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves = { "MaxAmmoReserves", nullptr, (EPropertyFlags)0x0010000000000001, UE4CodeGen_Private::EPropertyGenFlags::Int, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UFE_WeaponDataAsset, MaxAmmoReserves), METADATA_PARAMS(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves_MetaData)) };
 #if WITH_METADATA
 	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_CurrentLoadedAmmo_MetaData[] = {
 		{ "Category", "Ammuntion/Reloading" },
@@ -351,11 +338,10 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_Name,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_Type,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_IsFullAuto,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_ShotDelay,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_FireRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_DrawStowTime,
-		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxLoadedAmmo,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_MaxAmmoReserves,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_CurrentLoadedAmmo,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_CurrentAmmoReserves,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UFE_WeaponDataAsset_Statics::NewProp_ReloadTime,
@@ -396,7 +382,7 @@ void EmptyLinkFunctionForGeneratedCodeFE_WeaponDataAsset() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UFE_WeaponDataAsset, 1998804771);
+	IMPLEMENT_CLASS(UFE_WeaponDataAsset, 2497227358);
 	template<> FPSEXPERIMENT_API UClass* StaticClass<UFE_WeaponDataAsset>()
 	{
 		return UFE_WeaponDataAsset::StaticClass();

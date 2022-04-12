@@ -62,6 +62,9 @@ AFPSExperimentCharacter::AFPSExperimentCharacter()
 
 	//Intialize additional variables
 	CurrentWeaponSpread = 0.f;
+
+	CurrentLoadedAmmo = 0;
+	CurrentReserveAmmo = 0;
 }
 
 void AFPSExperimentCharacter::BeginPlay()
@@ -73,6 +76,17 @@ void AFPSExperimentCharacter::BeginPlay()
 	FP_Gun->AttachToComponent(Mesh1P, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true), TEXT("GripPoint"));
 
 	Mesh1P->SetHiddenInGame(false, true);
+
+	//Give weapon initial ammo
+	if (ActiveWeapon != nullptr)
+	{
+		CurrentLoadedAmmo = ActiveWeapon->MaxLoadedAmmo;
+		CurrentReserveAmmo = ActiveWeapon->MaxAmmoReserves;
+	}
+	else
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("No weapon active"));
+	}
 
 	//Start bullet spread decrease timer
 	GetWorldTimerManager().SetTimer(BulletSpreadTimerHandler, this, &AFPSExperimentCharacter::BulletSpreadDecrease, 0.1f, true, 0.1f);
@@ -109,10 +123,28 @@ void AFPSExperimentCharacter::SetupPlayerInputComponent(class UInputComponent* P
 
 void AFPSExperimentCharacter::StartFire()
 {
-	FireWeapon();
+	if (ActiveWeapon == nullptr)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("No weapon active"));
+		return;
+	}
 
-	if(ActiveWeapon->IsFullAuto)
-		GetWorldTimerManager().SetTimer(AutomaticFireTimer, this, &AFPSExperimentCharacter::FireWeapon, ActiveWeapon->FireRate, true);
+	if (!GetWorldTimerManager().IsTimerActive(FireDelayTimer) && !GetWorldTimerManager().IsTimerActive(ReloadTimer)) //add variables for swapping timers to also be checked
+	{
+		CanFire = true;
+	}
+
+	if (CanFire)
+	{
+		CanFire = false;
+
+		FireWeapon();
+
+		GetWorldTimerManager().SetTimer(FireDelayTimer, ActiveWeapon->FireRate, false);
+
+		if (ActiveWeapon->IsFullAuto)
+			GetWorldTimerManager().SetTimer(AutomaticFireTimer, this, &AFPSExperimentCharacter::FireWeapon, ActiveWeapon->FireRate, true);
+	}
 }
 
 void AFPSExperimentCharacter::StopFire()
@@ -123,10 +155,15 @@ void AFPSExperimentCharacter::StopFire()
 
 void AFPSExperimentCharacter::FireWeapon()
 {
-	if (ActiveWeapon == nullptr)
+	//Automatically reload if attempting to fire with no ammo
+	if (CurrentLoadedAmmo == 0)
 	{
-		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("No weapon active"));
+		CallReload();
 		return;
+	}
+	else
+	{
+		--CurrentLoadedAmmo;
 	}
 
 	if (ActiveWeapon->Type == WeaponType::HitScan)
@@ -288,5 +325,43 @@ void AFPSExperimentCharacter::BulletSpreadDecrease()
 	else
 	{
 		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("No weapon active"));
+	}
+}
+
+void AFPSExperimentCharacter::CallReload()
+{
+	if (ActiveWeapon == nullptr)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("No weapon active"));
+		return;
+	}
+
+	if (CurrentLoadedAmmo == (ActiveWeapon->MaxAmmoReserves) || GetWorldTimerManager().IsTimerActive(ReloadTimer))
+		return;
+
+	CanFire = false;
+
+	GetWorldTimerManager().SetTimer(ReloadTimer, this, &AFPSExperimentCharacter::Reload, ActiveWeapon->ReloadTime, false);
+}
+
+void AFPSExperimentCharacter::Reload()
+{
+	CurrentReserveAmmo -= (ActiveWeapon->MaxLoadedAmmo - CurrentLoadedAmmo);
+	CurrentLoadedAmmo = ActiveWeapon->MaxLoadedAmmo;
+}
+
+void AFPSExperimentCharacter::SwapWeapon(UFE_WeaponDataAsset SwapWeapon)
+{
+	if (ActiveWeapon != nullptr)
+	{
+		GEngine->AddOnScreenDebugMessage(-1, 15.0f, FColor::Yellow, TEXT("No weapon active"));
+	}
+	else
+	{
+		//Save Old Weapon
+
+		//New weapon profile
+		CurrentLoadedAmmo = ActiveWeapon->CurrentLoadedAmmo;
+		CurrentReserveAmmo = ActiveWeapon->CurrentAmmoReserves;
 	}
 }
