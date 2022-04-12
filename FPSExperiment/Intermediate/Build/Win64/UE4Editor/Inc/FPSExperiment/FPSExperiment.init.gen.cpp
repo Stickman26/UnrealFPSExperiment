@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeFPSExperiment_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0x5707CAC1,
+				0xE0668601,
 				0x2619DF24,
 				METADATA_PARAMS(nullptr, 0)
 			};

@@ -5,5 +5,6 @@
 
 bool UTargetReticleUI::Initialize()
 {
-
+	Super::Initialize();
+	return false;
 }

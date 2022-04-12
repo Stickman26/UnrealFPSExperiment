@@ -1,17 +1,12 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (X:\Repo\UnrealFPS\UnrealFPSExperiment).
   Building FPSExperimentEditor...
   Using Visual Studio 2019 14.25.28610 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.25.28610) and Windows 10.0.18362.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 9 actions with 12 processes...
-    [1/9] FPSExperiment.init.gen.cpp
-    [2/9] FE_WeaponDataAsset.cpp
-    [3/9] FPSExperimentCharacter.gen.cpp
-    [4/9] FPSExperimentGameMode.cpp
-    [5/9] FE_WeaponDataAsset.gen.cpp
-    [6/9] FPSExperimentCharacter.cpp
-    [7/9] UE4Editor-FPSExperiment-0007.lib
-       Creating library X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment-0007.lib and object X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment-0007.exp
-    [8/9] UE4Editor-FPSExperiment-0007.dll
-       Creating library X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment-0007.suppressed.lib and object X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment-0007.suppressed.exp
-    [9/9] FPSExperimentEditor.target
-  Total time in Parallel executor: 81.32 seconds
-  Total execution time: 82.14 seconds
+  Building 4 actions with 12 processes...
+    [1/4] TargetReticleUI.cpp
+    [2/4] UE4Editor-FPSExperiment-0016.lib
+       Creating library X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment-0016.lib and object X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment-0016.exp
+    [3/4] UE4Editor-FPSExperiment-0016.dll
+       Creating library X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment-0016.suppressed.lib and object X:\Repo\UnrealFPS\UnrealFPSExperiment\FPSExperiment\Intermediate\Build\Win64\UE4Editor\Development\FPSExperiment\UE4Editor-FPSExperiment-0016.suppressed.exp
+    [4/4] FPSExperimentEditor.target
+  Total time in Parallel executor: 6.12 seconds
+  Total execution time: 6.83 seconds
